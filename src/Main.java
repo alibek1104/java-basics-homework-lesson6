@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // 1.
 
-        int [] array = {1, 3, 4, 1, 5, 5};
+        int[] array = {1, 3, 4, 1, 5, 5};
         double sum = 0;
         double average = 0;
 
@@ -15,9 +15,9 @@ public class Main {
 
         //2.
 
-        int [] array = {1, 3, 4, 1, 5, 5};
+        int[] array = {1, 3, 4, 1, 5, 5};
         for (int i = 0; i < array.length; i++) { // мы пробегаемся по массиву
-            for (int j = i+1; j < array.length; j++) { // здесь мы сравниваем значения
+            for (int j = i + 1; j < array.length; j++) { // здесь мы сравниваем значения
                 if (array[i] == array[j]) {
                     System.out.println(array[i]);
                 }
@@ -39,7 +39,6 @@ public class Main {
         System.out.println("Найдено: " + isFound);
 
 
-
         // 3. 2)
 
         int[] array = {1, 3, -6, 23, 14, 2};
@@ -47,7 +46,7 @@ public class Main {
         boolean isFound = false;
 
         for (int i = 0; i < array.length; i++) {
-            for (int j = i+1; j < array.length; j++) {
+            for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == x) {
                     isFound = true;
                 }
@@ -60,7 +59,7 @@ public class Main {
         // 4. 2)
 
 
-        int [] array = {1, 3, -6, 23, 14, 2};
+        int[] array = {1, 3, -6, 23, 14, 2};
         int x = 23;
         int foundIndex = 0;
         boolean isFound = false;
@@ -84,7 +83,7 @@ public class Main {
 
         int n = 3;
         int m = 8;
-        int[] result = new int[m-n + 1];
+        int[] result = new int[m - n + 1];
         int counter = 0;
 
         for (int i = n; i <= m; i++) {
@@ -104,7 +103,7 @@ public class Main {
         int m = 3;
         int counter = 0;
 
-        int result[] = new int[m-n + 1];
+        int result[] = new int[m - n + 1];
 
         for (int i = n; i <= m; i++) {
             result[counter] = array[i];
@@ -173,20 +172,20 @@ public class Main {
 
         // 9. 1)
 
-        int[][] array = {{10, 20, 30},{40, 50, 60}};
-            for (int i = 0; i < array.length - 1; i++) {
-                for (int j = 0; j < array[i].length; j++) {
-                    System.out.println(array[i][j] + " " + array[i + 1][j]);
-                }
+        int[][] array = {{10, 20, 30}, {40, 50, 60}};
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.println(array[i][j] + " " + array[i + 1][j]);
             }
+        }
 
 
         // 9. 2)
 
-        int[][] array = {{4, 2, 1},{2, 7, 2}};
-            for (int i = 0; i < array.length - 1; i++) {
-                for (int j = 0; j < array[i].length; j++) {
-                System.out.println(array[i][j] + " " + array[i+1][j]);
+        int[][] array = {{4, 2, 1}, {2, 7, 2}};
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.println(array[i][j] + " " + array[i + 1][j]);
             }
         }
         // 10.
@@ -204,7 +203,7 @@ public class Main {
 
         int[][] array =
                 {{10, 20, 30},
-                {40, 50, 60}};
+                        {40, 50, 60}};
         boolean decision = false;
 
         for (int i = 0; i < array.length; i++) {
@@ -220,9 +219,9 @@ public class Main {
         // 11. 2)
 
 
-        int [][] array =
+        int[][] array =
                 {{10, 20},
-                {40, 50}};
+                        {40, 50}};
 
         boolean decision = true;
 
@@ -236,7 +235,34 @@ public class Main {
         }
 
         // 12.
+
+        int n = 5;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.printf("%5d", (i + 1) * (j + 1));
+            }
+            System.out.println();
+        }
         // 13.
+
+        int[][] array = {{10, 20, 30},
+                {40, 50, 60}};
+
+        int min = array[0][0];
+        int max = array[0][0];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+        }
+        System.out.println("Максимальный элемент: " + max);
+        System.out.println("Минимальный элемент: " + min);
 
 
     }
